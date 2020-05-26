@@ -5,18 +5,28 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script src="https://yuji-k64613.github.io/jmjs/tmp/v/0.1/js/jmjs.js"></script>
 <script>
+var jmj;
 function initialize() {
   var area = document.getElementById("area");
-  var jmj = new Jmj({ canvas: area });
-  jmj.startJuggling({ siteswap: "4" });
+  jmj = new Jmj({ canvas: area });
+}
+function start() {
+  jmj.startJuggling({ siteswap: "5" });
+}
+function stop() {
+  jmj.stopJuggling();
 }
 </script>
 </head>
 
 <body onload="initialize()">
-<h1>4</h1>
+<h1>5</h1>
 <div>
   <canvas id="area" width="300" height="300" style="border: solid"></canvas>
+</div>
+<div>
+  <input type="button" onclick="start()" value="Start">
+  <input type="button" onclick="stop()" value="Stop">
 </div>
 </body>
 
