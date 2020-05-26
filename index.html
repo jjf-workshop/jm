@@ -3,12 +3,20 @@
 
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://yuji-k64613.github.io/jmjs/tmp/v/0.1/js/jmjs.js"></script>
+<script>
+function initialize() {
+  var area = document.getElementById("area");
+  var jmj = new Jmj({ canvas: area });
+  jmj.startJuggling({ siteswap: "4" });
+}
+</script>
 </head>
 
-<body>
-<h1>3</h1>
+<body onload="initialize()">
+<h1>4</h1>
 <div>
-  <canvas width="300" height="300" style="border: solid"></canvas>
+  <canvas id="area" width="300" height="300" style="border: solid"></canvas>
 </div>
 </body>
 
